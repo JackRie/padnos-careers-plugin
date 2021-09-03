@@ -1,0 +1,81 @@
+.department-container {
+	background: #ccc;
+	padding: 50px;
+}
+
+.department-container p {
+	margin-top: 0;
+}
+
+.department-filter {
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 100px;
+	flex-direction: column;
+}
+
+.department-filter .radio {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.department-filter .radio input {
+	padding: 2px;
+	margin: 2px;
+	cursor: pointer;
+}
+
+.department-filter .radio label {
+	transition: 0.5s all;
+	cursor: pointer;
+}
+
+.department-filter .radio label:hover,
+.department-filter .radio label:focus,
+.department-filter .radio label:active {
+	color: #c21531;
+}
+
+.department-filter .radio input {
+	appearance: none;
+	background: url("/images/checkbox.png");
+	background-size: 14px 14px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 14px;
+	width: 14px;
+	margin-right: 5px;
+}
+
+.department-filter .radio input:checked {
+	background: url("/images/checkbox-on.png");
+	background-size: 14px 14px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.department-filter .radio input:checked ~ label {
+	color: #c21531;
+}
+
+@media (max-width: 75em) {
+	.department-filter {
+		max-height: 150px;
+	}
+}
+
+@media (max-width: 900px) {
+	.department-filter {
+		max-height: 220px;
+	}
+}
+
+@media (max-width: 650px) {
+	.department-filter {
+		max-height: unset;
+	}
+	.department-filter .radio label {
+		font-size: 0.87em;
+	}
+}
