@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Padnos Careers Plugin
- * Plugin URI: www.plugin.com
+ * Plugin URI: https://github.com/JackRie/padnos-careers-plugin
  * Description: A plugin build for Padnos that integrates with their Greenhouse Careers Board API.
  * Author: Jackie Riemersma
  * Version: 1.0.0
