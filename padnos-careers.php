@@ -16,7 +16,6 @@ if( !defined('ABSPATH') ) {
 //  Define plugin constants
 define('PADNOSCP_PATH', trailingslashit( plugin_dir_path(__FILE__) ));
 define('PADNOSCP_URL', trailingslashit( plugins_url('/', __FILE__) ));
-$hello = "hello";
 
 function padnos_cp_load_scripts() {
     wp_enqueue_script('padnos-careers-scripts', PADNOSCP_URL . '/build/index.js', array('jquery', 'wp-blocks', 'wp-element', 'wp-editor'), '1.0', true);
