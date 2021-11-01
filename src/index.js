@@ -9,7 +9,12 @@ import JobsFilter from "./scripts/JobsFilter"
 import JobsResults from "./scripts/JobsResults"
 import LoadingDots from "./scripts/LoadingDots"
 
+//NEED TO FIGURE OUT HOW TO USE QUERY VARIABLES FROM URL TO PRE-FILTER RESULTS
+
 function Main() {
+	// const queryVars = padnosData.queryVars
+	// const pathname = window.location.pathname
+	// let defaultValue = queryVars ? queryVars : 0
 	const [allData, setAllData] = useState()
 	const [filteredData, setFilteredData] = useState()
 	const [isLoading, setIsLoading] = useState(true)
@@ -34,6 +39,7 @@ function Main() {
 	useEffect(() => {
 		if (filteredValue == 0) {
 			setFilteredData(allData)
+			// window.history.pushState("object or string", "Title", `${pathname}`)
 		} else {
 			let result = []
 			let found = allData.filter(data => {
@@ -43,6 +49,7 @@ function Main() {
 			})
 			result.push(found[0])
 			setFilteredData(result)
+			// window.history.pushState("object or string", "Title", `${pathname}?department=${result[0].id}`)
 		}
 	}, [filteredValue])
 

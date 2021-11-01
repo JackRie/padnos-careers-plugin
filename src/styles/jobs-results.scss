@@ -9,6 +9,9 @@
 	& li {
 		display: flex;
 		align-items: flex-start;
+		&:before {
+			display: none;
+		}
 	}
 	& li h2 {
 		font-size: 18px;
